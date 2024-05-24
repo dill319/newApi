@@ -3,18 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>test</artifactId>
+	<artifactId>api-01</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>test</name>
+	<name>api-01</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.6.1</app.runtime>
-		<mule.maven.plugin.version>4.1.0</mule.maven.plugin.version>
+		<app.runtime>4.4.0-20230320</app.runtime>
+		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -50,13 +50,13 @@
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-http-connector</artifactId>
-			<version>1.9.1</version>
+			<version>1.7.3</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
-			<version>1.2.4</version>
+			<version>1.2.3</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
 	</dependencies>
@@ -65,7 +65,7 @@
 		<repository>
 			<id>anypoint-exchange-v3</id>
 			<name>Anypoint Exchange</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v3/maven</url>
+			<url>https://maven.eu1.anypoint.mulesoft.com/api/v3/maven</url>
 			<layout>default</layout>
 		</repository>
 		<repository>
