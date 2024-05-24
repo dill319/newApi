@@ -5,17 +5,17 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="939b22b1-9a05-47ef-ba43-e7bdfc22f480" >
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="5da53803-54a3-4130-a89b-7ec0b0ad66fa" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="testFlow" doc:id="b7464ac5-6717-4559-8d2f-8bc3cf94e2db" >
-		<http:listener doc:name="Listener" doc:id="5118adde-0cb1-4fd9-bb43-fb7c9544f9e2" config-ref="HTTP_Listener_config" path="/test"/>
-		<ee:transform doc:name="Transform Message" doc:id="a823d1f6-69b7-48f5-8917-4b868e44419a" >
+	<flow name="api-01Flow" doc:id="1d228caa-d30e-4472-a421-a81cccf6a468" >
+		<http:listener doc:name="Listener" doc:id="99525ae8-2bc2-4355-aa93-d6e1a688e9e1" config-ref="HTTP_Listener_config" path="/test"/>
+		<ee:transform doc:name="Transform Message" doc:id="46be8e52-0a84-48ea-a48d-cd582f2c1bda" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 ---
-"test failed"]]></ee:set-payload>
+"success cicd"]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 	</flow>
